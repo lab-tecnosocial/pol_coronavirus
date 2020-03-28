@@ -1,0 +1,544 @@
+<html>
+
+<head>
+    <link href="estilo.css" tyep="text/css" rel="stylesheet">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+</head>
+
+<body>
+    <div class="fig1">
+        <div id="container"></div>
+    </div>
+
+    <div class="fig2">
+        <div id="container2"></div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let myChart = Highcharts.chart('container', {
+                chart: {
+                    type: 'packedbubble',
+                    height: '100%'
+                },
+                credits: {
+                    enabled: false
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'left',
+                    verticalAlign: 'middle',
+                    itemMarginTop: 10,
+                    itemMarginBottom: 10
+                },
+                title: {
+                    text: 'Paises agrupados por su efectividad frente a la propagación del coronavirus'
+                },
+                tooltip: {
+                    useHTML: true,
+                    pointFormat: '<b>{point.name}</b>'
+                },
+                plotOptions: {
+                    packedbubble: {
+                        minSize: '20%',
+                        maxSize: '100%',
+                        zMin: 0,
+                        zMax: 1000,
+                        layoutAlgorithm: {
+                            gravitationalConstant: 0.05,
+                            splitSeries: true,
+                            seriesInteraction: false,
+                            dragBetweenSeries: false,
+                            parentNodeLimit: true
+                        },
+                        dataLabels: {
+                            enabled: true,
+                            format: '{point.name}',
+                            filter: {
+                                property: 'y',
+                                operator: '>',
+                                value: 1
+                            },
+                            style: {
+                                color: 'black',
+                                textOutline: 'none',
+                                fontWeight: 'normal'
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Efectivos',
+                    data: [{
+                        name: 'China',
+                        value: 400
+                    }, {
+                        name: 'Corea del Sur',
+                        value: 400
+                    },
+                    {
+                        name: "Taiwan",
+                        value: 400
+                    },
+                    {
+                        name: "Alemania",
+                        value: 400
+                    }]
+                }, {
+                    name: 'No efectivos. Europa',
+                    data: [{
+                        name: "Italia",
+                        value: 200
+                    },
+                    {
+                        name: "España",
+                        value: 200
+                    },
+                    {
+                        name: "Reino Unido",
+                        value: 200
+                    }]
+                }, {
+                    name: 'No efectivos. Potencias mundiales',
+                    data: [{
+                        name: "Estados Unidos",
+                        value: 100
+                    },
+                    {
+                        name: "Rusia",
+                        value: 100
+                    }]
+                }, {
+                    name: 'Algo efectivos. América Latina',
+                    data: [{
+                        name: "Cuba",
+                        value: 50
+                    },
+                    {
+                        name: "Argentina",
+                        value: 50
+                    }]
+                },
+                {
+                    name: 'No efectivos. América Latina',
+                    data: [{
+                        name: "Brasil",
+                        value: 10
+                    },
+                    {
+                        name: "México",
+                        value: 10
+                    },
+                    {
+                        name: "Ecuador",
+                        value: 5
+                    },
+                    {
+                        name: "Bolivia",
+                        value: 5
+                    }]
+                }
+                ]
+            });
+
+        });
+        var myChart2 = Highcharts.chart('container2', {
+
+            chart: {
+                type: 'heatmap',
+                marginTop: 100,
+                marginBottom: 120,
+                plotBorderWidth: 1
+            },
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: 'Factores en la efectividad de las medidas contra el coronavirus',
+                y: 10
+            },
+
+            xAxis: {
+                categories: ['Efectividad', 'Democracia electoral', 'Izquierda', 'Centro', 'Derecha', 'Formalidad del empleo', 'Sistema de salud', 'Respuesta temprana', 'Medidas de salud pública', 'Distancia social', 'Cuarentena', 'Represión', 'Sensibilidad social', 'Uso de tecnología digital', 'Participación social', 'Tecnología ciudadana', 'Colapso sanitario', 'Aceptación social', 'Continuidad económica']
+            },
+
+            yAxis: {
+                categories: ['China', 'Corea del Sur', 'Taiwan', 'Alemania', 'España', 'Italia', 'Reino Unido', 'Rusia', 'Estados Unidos', 'Cuba', 'Argentina', 'México', 'Brasil', 'Ecuador', 'Bolivia'],
+                title: null,
+                reversed: true
+            },
+
+            accessibility: {
+                point: {
+                    descriptionFormatter: function (point) {
+                        var ix = point.index + 1,
+                            xName = getPointCategoryName(point, 'x'),
+                            yName = getPointCategoryName(point, 'y'),
+                            val = point.value;
+                        return ix + '. ' + xName + yName + ', ' + val + '.';
+                    }
+                }
+            },
+
+            colorAxis: {
+                min: 0,
+                minColor: '#FFFFFF',
+                maxColor: Highcharts.getOptions().colors[2],
+                reversed: false
+
+            },
+
+            legend: {
+                // align: 'right',
+                // layout: 'vertical',
+                // margin: 0,
+                // verticalAlign: 'top',
+                // y: 25,
+                // symbolHeight: 280,
+                align: 'center',
+                verticalAlign: 'top',
+                floating: true,
+                x: 20,
+                y: 30,
+                symbolWidth: 310,
+                symbolHeight: 20
+            },
+
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + getPointCategoryName(this.point, 'x') + '</b>  <br><b>' +
+                        this.point.value + '</b>  <br><b>' + getPointCategoryName(this.point, 'y') + '</b>';
+                }
+            },
+
+            series: [{
+                name: 'Pertenencia a la categoria',
+                borderWidth: 1,
+                borderColor: '#8e8b8b',
+                data: [
+                    [0, 0, 1],
+                    [0, 1, 1],
+                    [0, 2, 1],
+                    [0, 3, 1],
+                    [0, 4, 0],
+                    [0, 5, 0],
+                    [0, 6, 0],
+                    [0, 7, 0.75],
+                    [0, 8, 0],
+                    [0, 9, 0.25],
+                    [0, 10, 0.25],
+                    [0, 11, 0],
+                    [0, 12, 0],
+                    [0, 13, 0],
+                    [0, 14, 0],
+                    [1, 0, 0],
+                    [1, 1, 1],
+                    [1, 2, 1],
+                    [1, 3, 1],
+                    [1, 4, 1],
+                    [1, 5, 1],
+                    [1, 6, 1],
+                    [1, 7, 0.5],
+                    [1, 8, 1],
+                    [1, 9, 0],
+                    [1, 10, 1],
+                    [1, 11, 1],
+                    [1, 12, 1],
+                    [1, 13, 1],
+                    [1, 14, 1],
+                    [2, 0, 1],
+                    [2, 1, 0],
+                    [2, 2, 0],
+                    [2, 3, 0],
+                    [2, 4, 1],
+                    [2, 5, 1],
+                    [2, 6, 0],
+                    [2, 7, 0],
+                    [2, 8, 0],
+                    [2, 9, 1],
+                    [2, 10, 1],
+                    [2, 11, 1],
+                    [2, 12, 0],
+                    [2, 13, 0],
+                    [2, 14, 0],
+                    [3, 0, 0],
+                    [3, 1, 1],
+                    [3, 2, 1],
+                    [3, 3, 1],
+                    [3, 4, 0],
+                    [3, 5, 0],
+                    [3, 6, 0],
+                    [3, 7, 0],
+                    [3, 8, 0],
+                    [3, 9, 0],
+                    [3, 10, 0],
+                    [3, 11, 0],
+                    [3, 12, 0],
+                    [3, 13, 0],
+                    [3, 14, 0],
+                    [4, 0, 0],
+                    [4, 1, 0],
+                    [4, 2, 0],
+                    [4, 3, 0],
+                    [4, 4, 0],
+                    [4, 5, 0],
+                    [4, 6, 1],
+                    [4, 7, 1],
+                    [4, 8, 1],
+                    [4, 9, 0],
+                    [4, 10, 0],
+                    [4, 11, 0],
+                    [4, 12, 1],
+                    [4, 13, 1],
+                    [4, 14, 1],
+                    [5, 0, 0.5],
+                    [5, 1, 0.75],
+                    [5, 2, 0.75],
+                    [5, 3, 1],
+                    [5, 4, 0.75],
+                    [5, 5, 1],
+                    [5, 6, 1],
+                    [5, 7, 0.75],
+                    [5, 8, 1],
+                    [5, 9, 0.5],
+                    [5, 10, 0.75],
+                    [5, 11, 0.5],
+                    [5, 12, 0.75],
+                    [5, 13, 0.5],
+                    [5, 14, 0.25],
+                    [6, 0, 0.5],
+                    [6, 1, 1],
+                    [6, 2, 1],
+                    [6, 3, 1],
+                    [6, 4, 0.5],
+                    [6, 5, 0.5],
+                    [6, 6, 1],
+                    [6, 7, 0.5],
+                    [6, 8, 0.5],
+                    [6, 9, 0.5],
+                    [6, 10, 0.5],
+                    [6, 11, 0.5],
+                    [6, 12, 0.5],
+                    [6, 13, 0.5],
+                    [6, 14, 0.5],
+                    [7, 0, 0],
+                    [7, 1, 1],
+                    [7, 2, 1],
+                    [7, 3, 1],
+                    [7, 4, 0],
+                    [7, 5, 0],
+                    [7, 6, 0],
+                    [7, 7, 0],
+                    [7, 8, 0],
+                    [7, 9, 0],
+                    [7, 10, 0],
+                    [7, 11, 0],
+                    [7, 12, 0],
+                    [7, 13, 0],
+                    [7, 14, 0],
+                    [8, 0, 0],
+                    [8, 1, 1],
+                    [8, 2, 1],
+                    [8, 3, 1],
+                    [8, 4, 0],
+                    [8, 5, 0],
+                    [8, 6, 0],
+                    [8, 7, 0],
+                    [8, 8, 0],
+                    [8, 9, 0.5],
+                    [8, 10, 0],
+                    [8, 11, 0],
+                    [8, 12, 0],
+                    [8, 13, 0],
+                    [8, 14, 0],
+                    [9, 0, 0],
+                    [9, 1, 1],
+                    [9, 2, 1],
+                    [9, 3, 1],
+                    [9, 4, 1],
+                    [9, 5, 1],
+                    [9, 6, 1],
+                    [9, 7, 1],
+                    [9, 8, 1],
+                    [9, 9, 1],
+                    [9, 10, 1],
+                    [9, 11, 1],
+                    [9, 12, 1],
+                    [9, 13, 1],
+                    [9, 14, 1],
+                    [10, 0, 1],
+                    [10, 1, 0],
+                    [10, 2, 0],
+                    [10, 3, 0],
+                    [10, 4, 1],
+                    [10, 5, 1],
+                    [10, 6, 1],
+                    [10, 7, 0],
+                    [10, 8, 0],
+                    [10, 9, 0],
+                    [10, 10, 1],
+                    [10, 11, 0],
+                    [10, 12, 0],
+                    [10, 13, 1],
+                    [10, 14, 1],
+                    [11, 0, 1],
+                    [11, 1, 0],
+                    [11, 2, 0],
+                    [11, 3, 0],
+                    [11, 4, 1],
+                    [11, 5, 1],
+                    [11, 6, 1],
+                    [11, 7, 0],
+                    [11, 8, 0],
+                    [11, 9, 0],
+                    [11, 10, 1],
+                    [11, 11, 0],
+                    [11, 12, 0],
+                    [11, 13, 1],
+                    [11, 14, 1],
+                    [12, 0, 0],
+                    [12, 1, 1],
+                    [12, 2, 1],
+                    [12, 3, 1],
+                    [12, 4, 1],
+                    [12, 5, 1],
+                    [12, 6, 0],
+                    [12, 7, 0],
+                    [12, 8, 0],
+                    [12, 9, 1],
+                    [12, 10, 1],
+                    [12, 11, 0],
+                    [12, 12, 0],
+                    [12, 13, 0.5],
+                    [12, 14, 0.25],
+                    [13, 0, 1],
+                    [13, 1, 1],
+                    [13, 2, 1],
+                    [13, 3, 0.5],
+                    [13, 4, 0.25],
+                    [13, 5, 0.25],
+                    [13, 6, 0.25],
+                    [13, 7, 0.25],
+                    [13, 8, 0.25],
+                    [13, 9, 0.25],
+                    [13, 10, 0.25],
+                    [13, 11, 0.25],
+                    [13, 12, 0.25],
+                    [13, 13, 0.25],
+                    [13, 14, 0.25],
+                    [14, 0, 0],
+                    [14, 1, 1],
+                    [14, 2, 1],
+                    [14, 3, 0.5],
+                    [14, 4, 0.25],
+                    [14, 5, 0.25],
+                    [14, 6, 0],
+                    [14, 7, 0],
+                    [14, 8, 0.25],
+                    [14, 9, 0],
+                    [14, 10, 0.25],
+                    [14, 11, 0],
+                    [14, 12, 0],
+                    [14, 13, 0.25],
+                    [14, 14, 0.25],
+                    [15, 0, 0],
+                    [15, 1, 1],
+                    [15, 2, 1],
+                    [15, 3, 0.5],
+                    [15, 4, 0],
+                    [15, 5, 0],
+                    [15, 6, 0],
+                    [15, 7, 0],
+                    [15, 8, 0.25],
+                    [15, 9, 0],
+                    [15, 10, 0.5],
+                    [15, 11, 0],
+                    [15, 12, 0.25],
+                    [15, 13, 0.5],
+                    [15, 14, 0.25],
+                    [16, 0, 0.5],
+                    [16, 1, 0],
+                    [16, 2, 0],
+                    [16, 3, 0],
+                    [16, 4, 1],
+                    [16, 5, 1],
+                    [16, 6, 0],
+                    [16, 7, 0],
+                    [16, 8, 0],
+                    [16, 9, 0],
+                    [16, 10, 0],
+                    [16, 11, 0],
+                    [16, 12, 0],
+                    [16, 13, 1],
+                    [16, 14, 0],
+                    [17, 0, 0.5],
+                    [17, 1, 1],
+                    [17, 2, 1],
+                    [17, 3, 1],
+                    [17, 4, 0.5],
+                    [17, 5, 0.5],
+                    [17, 6, 0.5],
+                    [17, 7, 1],
+                    [17, 8, 1],
+                    [17, 9, 1],
+                    [17, 10, 0.5],
+                    [17, 11, 0.5],
+                    [17, 12, 0.5],
+                    [17, 13, 0.5],
+                    [17, 14, 0.5],
+                    [18, 0, 0.5],
+                    [18, 1, 1],
+                    [18, 2, 1],
+                    [18, 3, 1],
+                    [18, 4, 0],
+                    [18, 5, 0],
+                    [18, 6, 0],
+                    [18, 7, 1],
+                    [18, 8, 1],
+                    [18, 9, 1],
+                    [18, 10, 0],
+                    [18, 11, 1],
+                    [18, 12, 1],
+                    [18, 13, 0],
+                    [18, 14, 0]
+                ],
+                dataLabels: {
+                    enabled: false,
+                    color: '#000000'
+                }
+            }],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        yAxis: {
+                            labels: {
+                                formatter: function () {
+                                    return this.value.charAt(0);
+                                }
+                            }
+                        }
+                    }
+                }]
+            }
+
+        });
+        function getPointCategoryName(point, dimension) {
+            var series = point.series,
+                isY = dimension === 'y',
+                axis = series[isY ? 'yAxis' : 'xAxis'];
+            return axis.categories[point[isY ? 'y' : 'x']];
+        }
+    </script>
+</body>
+
+</html>
