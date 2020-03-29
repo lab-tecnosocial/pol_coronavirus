@@ -13,6 +13,14 @@
     margin: 1em auto;
 }
 
+.fig3 #container3 #container4 #container5 {
+    min-width: 220px; 
+    max-width: 440px;
+    max-height: 120px;
+    margin: 1em auto;
+}
+
+
 .contenedor {
     max-width: 1024px;
     margin: 0 auto;
@@ -22,14 +30,14 @@
 p {
     text-align: justify;
     text-justify: inter-word;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   h1 {
     text-align:center;
   }
 
 ul li {
-    font-size: 0.9em;
+    font-size: 1em;
 
 }
 
