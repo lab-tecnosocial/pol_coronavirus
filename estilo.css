@@ -23,6 +23,7 @@
 
 .contenedor {
     max-width: 1024px;
+    margin-top: 2em;
     margin: 0 auto;
     font: 1em 'Lato', sans-serif;
 }
