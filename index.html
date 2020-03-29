@@ -2,6 +2,7 @@
 
 <head>
     <link href="estilo.css" tyep="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script>
@@ -11,15 +12,536 @@
 </head>
 
 <body>
-    <div class="fig1">
-        <div id="container"></div>
+    <div class="contenedor">
+        <h1>Salud pública, tecnología y participación. <span id="subtitulo"><br>Una breve comparación de las medidas políticas que enfrentan el Covid-19</span></h1>
+        <h2 id="autor"><a href="http://labtecnosocial.org/" target="_blank">Lab TecnoSocial</a></h2>
+            <p>¿Cómo los gobiernos alrededor del mundo están enfrentando la epidemias nacionales del coronavirus? ¿Qué
+                decisiones están tomando y con qué medios las efectivizan? ¿Existe algún modelo efectivo frente a la amenaza
+                de la epidemia? ¿La cuarentena es la única medida posible? ¿Cuál es el rol de la tecnologías de información
+                en el control de la epidemia e inclusive en el control de la población? ¿Debemos los ciudadanos aceptar
+                cualquier medida de los gobiernos a título de seguridad?</p>
+
+            <p>Hemos revisado las medidas políticas frente al coronavirus de 15 países, en diferentes continentes,
+                comparando algunos factores contextuales a nivel de tendencia política, formalidad del empleo y sistema de
+                salud, con las medidas efectivas que han tomado frente a la epidemia, su relación con las tecnologías
+                digitales y el comportamiento general de sus sociedades civiles. Dado que aún no existe una vacuna
+                disponible, las intervenciones por el momento no son farmacéuticas y tienen que ver con una combinación de
+                medidas de salud pública, vigilancia tecnológica, distancia social y hasta represión.</p>
+
+            <p>Nos basamos en las siguientes 19 categorías de comparación. La construcción de esta tabla se detalla en el
+                apartado metodológico.</p>
+
+        <div class="fig2">
+            <div id="container2"></div>
+        </div>
+
+        <p>A continuación describiremos brevemente las combinaciones más típicas, tanto efectivas como no efectivas que
+            el análisis comparativo ha arrojado y que nos sirve para pensar en mejores políticas para afrontar
+            elcoronavirus.</p>
+        <h2>Los dos modelos asiáticos</h2>
+        <p>Se suele nombrar a China como un ejemplo para enfrentar el coronavirus, ya que actualmente registra un
+            aplanamiento en su curva epidémica. Sus políticas de emergencia fueron efectivas, por lo que algunos
+            gobiernos intentan replicar su contundente despliegue. Se destaca su fuerte presencia estatal y su
+            tecnología avanzada. Sin embargo, no es el único país exitoso y, de hecho, como apuntó Harari, a pesar de su
+            efectividad, su modelo implica una amenaza directa a las libertades democráticas. Las mismas tecnologías que
+            se usaron para identificar y controlar el virus son las mismas que utiliza para controlar a su población. En
+            realidad, en Asia existen dos modelos para afrontar la epidemia: el modelo Chino y el enarbolado por Corea
+            del Sur y Taiwán. Ambos modelos tienen similitudes en la dimensión tecnológica, pero poseen otras
+            diferencias sustanciales.</p>
+
+        <p>Del modelo chino brillan dos cosas: su tecnología avanzada y su presencia estatal en su brazo burocrático
+            (fusión entre partido y administración pública) y represivo (policial y militar). Aquí se ha usado desde
+            sistemas de información geográficos en tiempo real, hasta big data, inteligencia artificial, distintos tipos
+            de apps y drones. Tecnologías de información, pero además tecnología médica, como producción de tests y
+            sensores de calor, y tecnología industrial para poder adaptar su sistema de salud. China ha ordenado,
+            además, una cuarentena sin precedentes que hizo cumplir con puño de hierro, logrando parar alrededor 700
+            millones de personas. En todo ello, el factor de la represión es central, pues para la efectivización tanto
+            de las tecnologías de información como de las medidas de cuarentena se necesita la aceptación rápida de la
+            sociedad civil.</p>
+
+        <p>Solo con ese alto nivel de tecnología y capacidad de represión, el gobierno chino pudo compensar, al menos en
+            su territorio, sus errores iniciales. La respuesta China al coronavirus fue deliberadamente tardía. Durante
+            semanas, el gobierno se dedicó a censurar los medios y las redes sociales, negando la existencia y gravedad
+            del virus; los médicos que investigaban el incipiente brote en Wuhan fueron arrestados y acusados de
+            difundir rumores falsos. Su acción posterior fue efectiva dentro de su territorio, pero debido a su
+            respuesta tardía el virus logró trascender sus fronteras.</p>
+
+        <p>El segundo modelo, donde se encuentran Corea del Sur y Taiwán, también se guía por datos de tecnologías
+            digitales. A diferencia de China, estos dos países sí actuaron de forma temprana, hicieron un control mucho
+            más preciso de la situación, y no acudieron a una cuarentena y a la consiguiente represión. Se aplicaron
+            tempranamente medidas de salud efectivas, que incluían testeos masivos, producción y distribución gratuita
+            de mascarillas, desarrollo de nuevos tests, entre otros. Si bien se aplicó el distanciamiento social,
+            mediante el cierre de escuelas y la prohibición de eventos masivos, no decidieron declarar cuarentena y por
+            tanto no experimentaron un paralizamiento social y económico. Usando un término más contemporáneo y
+            tecnológico, sus medidas fueron mucho más ‘smart’.</p>
+
+        <p>A diferencia de China en estos países su sociedad civil participó activamente y el gobierno estuvo abierto a
+            colaborar con los ciudadanos y no reprimirlos. Las tecnologías de información jugaron un papel esencial para
+            el seguimiento de los infectados y los focos de posible infección. Por un lado, sus gobiernos lograron usar
+            efectivamente los datos para reconstruir la trazabilidad del virus usando diferentes fuentes, no sin cierta
+            polémica por la legitimidad en el uso de esos datos. Pero, por el otro, la ciudadanía también se involucró
+            con la creación de apps y una adopción y participación masiva en ellos. Un ejemplo es la app Corona 100 en
+            Corea del Sur, una app que recolecta información pública y la cruza con la geolocalización de uno para luego
+            mandar una alerta cuando se está a menos de 100 metros de una zona de contagio. O la app que permitía hacer
+            seguimiento de los lugares y la disponibilidad de mascarillas en Taiwan.</p>
+
+        <p>Si bien Byung-Chul Han, desde su tecnopesimismo al que nos tiene acostumbrados, plantea que existe un sólo
+            modelo asiático de uso autoritario de la tecnología, nosotros encontramos que la tecnología sí puede usarse
+            de forma adecuada para el empoderamiento de la sociedad civil y no solo para el vigilantismo de los
+            gobiernos. De todas formas, en todo esto debe existir un marco de derechos claro para que los gobiernos no
+            puedan usar libremente los datos con fines de autoreproducción de su propio poder, olvidando el bien común.
+        </p>
+        <h2>La vieja Europa</h2>
+        <p> En contra de cualquier pronóstico, Europa terminó siendo el continente más afectado por la pandemia. Extraña
+            ver cómo varios sistemas de salud, considerados entre los más robustos y sofisticados del mundo, han
+            colapsado. Ello se debe en, primer lugar, a su reacción tardía ante la emergencia internacional que ya se
+            anunciaba el 31 de enero por la OMS. España, por ejemplo, sólo impulsó medidas recién desde el 9 de marzo;
+            Italia lo hizo antes, pero sus medidas no fueron sistemáticas. Reino Unido solo hace unos pocos días atrás
+            reconoció el problema y empezó a dictar medidas de distanciamiento social. Estos países no tienen el mismo
+            nivel de penetración de las tecnologías digitales que los países asiáticos, ni en su gobierno ni en su
+            sociedad civil. Y pese a sus declaratorias de cuarentena, las medidas aún no parecen ser muy efectivas.</p>
+
+        <p>Sin embargo, Alemania fue uno de los países europeos que mejor ha respondido a la emergencia. El número de
+            fallecidos es muy bajo en comparación con países vecinos. En este caso la clave ya no está tanto en las
+            tecnologías digitales y los datos, sino en la intervención en salud pública. Con un sistema de salud robusto
+            y un despliegue oportuno de personal y recursos médicos y realizando hasta 200.000 tests al día, Alemanía
+            está conteniendo relativamente bien el avance del virus. </p>
+
+        <h2>Las potencias mundiales antagónicas</h2>
+        <p>Rusia y Estados Unidos, países que históricamente han conformado bloques geopolíticos antagónicos, han
+            apostado por mantener su continuidad económica y hasta el momento no han reconocido el problema. Pese a sus
+            posibilidades en su sistema de salud, no asumieron la medida de los testeos masivos ni otras intervenciones
+            sanitarias. No se declaró cuarentena, aunque sí asumieron algunas medidas de distancia social, como el
+            cierre temporal de sus fronteras.</p>
+
+        <p>No obstante, parecen contar con la infraestructura necesaria para afrontar el problema, tanto en
+            infraestructura de salud como tecnológica. Una opción que se ha planteado es que podrían solicitar los datos
+            de sus empresas tecnológicas más grandes para geolocalizar a los ciudadanos; Google, Facebook y Twitter para
+            el caso estadounidense y Yandex y VK para el caso ruso. Esto trae problemas a nivel de derechos de
+            privacidad y podría llevar a estos países por los rumbos más directos de intervención de empresas de China.
+            Otra opción más participativa es la del MIT que ha desarrollado una app (Private Kit: Safe Paths) para hacer
+            seguimiento geolocalizado del desarrollo del virus, pero que al mismo tiempo sigue los estándares de
+            protección de datos personales, siendo que los datos no pasan por un servidor central y su participación es
+            voluntaria. </p>
+        <h2>América Latina en incertidumbre</h2>
+        <p>La llegada del Covid-19 a América Latina es reciente y la efectividad de las medidas adoptadas por los
+            diferentes gobiernos aún está por evidenciarse. De todos modos se observa que las respuestas resultaron
+            tardías al igual que en la vieja Europa. Dos de los países más poderosos de la región y, en teoría, con
+            gobiernos de opuesta tendencia ideológica, México y Brasil, hasta el momento no han tomando medidas
+            efectivas contra la pandemia, y se limitan a medidas de distancia social. Otra vez aquí está la apuesta por
+            la continuidad económica.</p>
+
+        <p>Sin embargo, hay dos países que están teniendo algo más de efectividad: Cuba y Argentina. Cuba, por un lado,
+            es el país con el mayor presupuesto para salud en la región, lo que hace que, hasta el momento, tenga una
+            situación mejor controlada. Argentina, por su parte, tiene un desarrollado sistema de salud y han apostado
+            rápidamente por la cuarentena, aunque por lo mismo, también por la represión y las detenciones masivas.</p>
+
+        <p>En la región Andina, Ecuador se está llevando la peor parte y es el segundo país de América Latina con más
+            infectados, después de Brasil. Destacar que Ecuador y Bolivia han seguido pasos similares: respuesta tardía,
+            falta de testeo masivo y despliegue efectivo de recursos médicos, distanciamiento social y cuarentena
+            militarizada. Además, en ninguno de ellos la tecnología y los datos juega un rol central.</p>
+
+        <p>Bolivia, no obstante, tiene la peculiaridad de tener la economía más informal de los 15 países analizados. El
+            paro social que produce la cuarentena tiene aquí un costo social mucho mayor, y se percibe un importante
+            descontento en un sector de la población. </p>
+
+        <h2>¿Hacía dónde vamos?</h2>
+
+        <p>En redes sociales podemos encontrar muchas expresiones categóricas y emocionales por parte de los seguidores
+            de una u otra tendencia política (“izquierda” o “derecha”) que denuncian que la tendencia contraria tiene
+            toda la culpa por la actual crisis; o que los gobiernos de su misma tendencia en otras partes del mundo
+            encaran de mejor forma la epidemia del coronavirus. Nosotros hemos encontrado que, a nivel comparativo,
+            ninguna tendencia ideológica es una condición necesaria para la efectividad de las políticas contra el
+            coronavirus. En todo caso se da mayor efectividad de los países con gobiernos de “centro” (Corea del Sur,
+            Taiwan y Alemania), que poseen mejor infraestructura de salud y mayor seguridad económica. Como una
+            excepción, China logró controlar al coronavirus en su territorio, pero gracias a un conjunto de medidas
+            difícilmente replicables en otros países (tecnología, burocracia y represión), que además debido a su
+            vigilantismo exacerbado constituyen una amenaza para las libertades democráticas. Por lo que no sólo se
+            trata de buscar las medidas más efectivas, sino también las más democráticas, por los efectos posteriores
+            que las políticas actuales puedan tener.</p>
+
+        <p>España, Italia y Reino Unido nos demuestran que tener un sistema de salud robusto y una economía más formal
+            no son garantías para controlar al coronavirus. Se necesita además la concurrencia de factores adicionales.
+            Uno de esos factores tienen que ver con las tecnologías digitales, y la posibilidad de identificación,
+            seguimiento y control del virus que ofrecen, pero que pueden ser utilizados de forma vertical por el
+            gobierno o de forma horizontal por los ciudadanos. Por supuesto que la intervención sistemática en varios
+            niveles es la que ofrece mejores resultados; una adecuada infraestructura e inversión en salud es esencial,
+            pero aquí queremos llamar la atención sobre estos dos factores novedosos, que también marcarán nuestras
+            sociedades post coronavirus: la tecnología digital, como vigilancia estatal o como participación ciudadana.
+            Estos factores incluso lograron en otras latitudes evitar el shock social y el paro económico que ocasionan
+            las cuarentenas forzosas y generales.</p>
+
+        <p>América Latina, no obstante, parece seguir el camino marcado por España. No respondimos tempranamente al
+            virus, no realizamos tests masivos y tampoco le hemos otorgado un rol protagónico a la tecnología y la
+            participación; por lo que los colapsos de nuestros sistemas de salud son una posibilidad. Ya en la región
+            andina parece que estamos apostando por el modelo chino de cuarentena militarizada, pero sin la medicina ni
+            la tecnología necesarias. Además de que los gobiernos no están prestando suficiente atención a las
+            poblaciones más vulnerables y a la desigualdad social que merece medidas diferenciadas.</p>
+
+        <p>En Bolivia, como en otros países de América Latina, a falta de medidas precisas y ‘smart’ frente a la
+            propagación del virus y frente a la diversidad de su sociedad civil, se ve una mayor apuesta por medidas de
+            fuerza bruta y generalizadas. Las medidas de cuarentena con represión poseen un costo bajo para los
+            políticos, pero uno muy alto para los ciudadanos. Aquí se ha intentado mostrar otras alternativas de
+            intervención. Una combinación efectiva implica gobiernos democráticos con infraestructuras de servicios
+            básicos y con tecnologías participativas.</p>
+
+        <p>A pesar de todo lo negativo que trae la epidemia, esta crisis puede ser una oportunidad para desnudar el
+            desempeño real de nuestras instituciones políticas y sociales. Y, por tanto, puede ser una oportunidad para
+            rediseñarlas.</p>
+       
+            <div class="fig1">
+                <div id="container"></div>
+            </div>
+        <hr>
+        
+
+    
+        <h2>Metodología</h2>
+        <p>La metodología se basa parcialmente en el análisis comparativo cualitativo (QCA) basado en conjuntos difusos
+            (<a href="https://www.press.uchicago.edu/ucp/books/book/chicago/F/bo3635786.html">Charles Ragin 2000</a>). Las filas en la tabla representan los casos, que fueron seleccionados de acuerdo a
+            los criterios de gravedad en la epidemia de coronavirus, diversidad gubernamental y diversidad en las
+            medidas tomadas frente a la epidemia. Las columnas representan categorías de comparación. El valor de cada
+            celda representa la no pertenencia (0) o pertenencia (1) del caso a la categoría o algún valor intermedio;
+            no representan magnitud. La asignación de los valores en el caso las categorías políticas, económicas y de
+            salud se hizo por adaptación ordinal de los indicadores nombrados en la lista de fuentes. Para las medidas
+            políticas y el uso de la tecnología se usaron fuentes periodísticas. Para la narración de este breve reporte
+            nos hemos sustentado en la combinación de ciertos factores que han mostrado efectividad y su consistencia en
+            los diferentes casos. Vale aclarar que el presente trabajo es exploratorio y se produce en plena crisis del
+            coronavirus. Queda la tarea pendiente de evaluar posteriormente la situación en retrospectiva y con mayores
+            recursos a disposición. </p>
+        <h3>Categorías de análisis</h3>
+        <ul>
+            <li>Contexto del país</li>
+            <ul>
+                <li>Caso</li>
+                <ul>
+                    <li>Región</li>
+                    <li>País</li>
+                </ul>
+                <li>Político</li>
+                <ul>
+                    <li>Democracia Electoral</li>
+                    <li>Tendencia política</li>
+                    <ul>
+                        <li>Izquierda</li>
+                        <li>Centro</li>
+                        <li>Derecha</li>
+                    </ul>
+                </ul>
+                <li>Económico</li>
+                <ul>
+                    <li>Formalidad del Empleo</li>
+                </ul>
+                <li>Sistema de salud</li>
+                <ul>
+                    <li>Sistema de salud robusto</li>
+                </ul>
+            </ul>
+            <li>Medidas políticas</li>
+            <ul>
+                <li>Decisiones</li>
+                <ul>
+                    <li>Respuesta temprana</li>
+                    <li>Medidas de Salud: pruebas masivas</li>
+                    <li>Distanciamiento Social</li>
+                    <li>Cuarentena</li>
+                    <li>Represión</li>
+                    <li>Sensibilidad Social</li>
+                </ul>
+                <li>Tecnología</li>
+                <ul>
+                    <li>Sistema de Información</li>
+                    <li>Big Data</li>
+                    <li>Inteligencia Artificial</li>
+                    <li>Aplicaciones</li>
+                </ul>
+            </ul>
+            <li>Sociedad civil</li>
+            <ul>
+                <li>Participación Social</li>
+                <li>Tecnologías Ciudadanas</li>
+                <li>Relación con la Sociedad positiva</li>
+            </ul>
+            <li>Efectividad</li>
+            <ul>
+                <li>Aceptación Social</li>
+                <li>Contención Económica</li>
+                <li>Colapso del sistema de Salud</li>
+                <li>Efectividad</li>
+            </ul>
+        </ul>
+        <h2>Fuentes revisadas</h3>
+            <h3>Indicadores políticos, económicos y de salud</h3>
+
+            <p>Varieties of Democracy (V-Dem) Electoral Democracy Index (2019). <a
+                    href="https://www.v-dem.net/es/analysis/MapGraph/">https://www.v-dem.net/es/analysis/MapGraph/</a>
+            </p>
+
+            <p>Oficina Internacional del Trabajo (OIT): Mujeres y Hombres en la Economía Informal: Un panorama
+                estadístico. <a
+                    href="https://www.ilo.org/wcmsp5/groups/public/---dgreports/---dcomm/documents/publication/wcms_635149.pdf">https://www.ilo.org/wcmsp5/groups/public/---dgreports/---dcomm/documents/publication/wcms_635149.pdf</a>
+            </p>
+
+            <p>Universidad Johns Hopkins, Nuclear Threat Iniciative (NTI), The Economist. Global Health Security Index. <ahref="https://www.ghsindex.org/wp-content/uploads/2019/10/2019-Global-Health-Security-Index.pdf">https://www.ghsindex.org/wp-content/uploads/2019/10/2019-Global-Health-Security-Index.pdf</a>
+            </p>
+
+            <h3>Alemania</h3>
+
+            <p>British Broadcasting Corporation (BBC). Coronavirus: ¿por qué Alemania tiene un número tan bajo de
+                muertos por covid-19 comparación con otros países? <a
+                    href="https://www.bbc.com/mundo/noticias-internacional-51980118">https://www.bbc.com/mundo/noticias-internacional-51980118</a>
+            </p>
+
+            <p>The Local. ‘200.000 tests a day ’: Germany pushes to expand coronavirus testing.<a
+                    href="https://www.thelocal.de/20200327/germany-pushes-to-expand-coronavirus-testing-capacity">https://www.thelocal.de/20200327/germany-pushes-to-expand-coronavirus-testing-capacity</a>
+            </p>
+
+            <h3>Argentina</h3>
+
+            <p>El Clarín. Coronavirus en Argentina: quiénes cobrarán el subsidio de $ 10.000 y cómo hay que hacer para
+                obtenerlo.<a
+                    href="https://www.clarin.com/economia/coronavirus-argentina-cobraran-subsidio-10-000-hacer-obtenerlo_0_1Uza6BD-Q.html">https://www.clarin.com/economia/coronavirus-argentina-cobraran-subsidio-10-000-hacer-obtenerlo_0_1Uza6BD-Q.html</a>
+            </p>
+
+            <p>Ministerio de Salud de Argentina. ¿Qué medidas está tomando el gobierno? <a
+                    href="https://www.argentina.gob.ar/coronavirus/medidas-gobierno">https://www.argentina.gob.ar/coronavirus/medidas-gobierno</a>
+
+                <p>La Izquierda Diario. Con la militarización, el Estado ya detuvo a 8.800 trabajadores y trabajadoras.
+                    <a
+                        href="http://www.laizquierdadiario.com.bo/Coronavirus-con-la-militarizacion-el-Estado-ya-detuvo-a-8-800-trabajadoras-y-trabajadores">http://www.laizquierdadiario.com.bo/Coronavirus-con-la-militarizacion-el-Estado-ya-detuvo-a-8-800-trabajadoras-y-trabajadores</a>
+                </p>
+
+                <p>El Clarín. Coronavirus en Argentina: ¿Qué es el estado de sitio y cuándo se aplicó en el país? <a
+                        href="https://www.clarin.com/politica/coronavirus-argentina-que-es-estado-de-sitio-y-cuando-se-aplico_0_9mpF06tUi.html">https://www.clarin.com/politica/coronavirus-argentina-que-es-estado-de-sitio-y-cuando-se-aplico_0_9mpF06tUi.html</a>
+                </p>
+
+                <h3>Bolivia</h3>
+
+                <p>Opinión. Añez suspende clases todo el país y cierra el espacio aéreo a vuelos a Europa. <a
+                        href="https://www.opinion.com.bo/articulo/pais/anez-suspende-labores-escolares-todo-pais-vuelos-europa-asia/20200312121814756152.html">https://www.opinion.com.bo/articulo/pais/anez-suspende-labores-escolares-todo-pais-vuelos-europa-asia/20200312121814756152.html</a>
+                </p>
+
+                <p>Correo del Sur. Jeanine Añez declara estado de emergencia en el país. <a
+                        href="https://correodelsur.com/sociedad/20200325_jeanine-anez-declara-estado-de-emergencia-en-el-pais.html">https://correodelsur.com/sociedad/20200325_jeanine-anez-declara-estado-de-emergencia-en-el-pais.html</a>
+                </p>
+
+                <p>El Deber. Lanzan app con información oficial del coronavirus en Bolivia. <a
+                        href="https://eldeber.com.bo/169472_lanzan-app-con-informacion-oficial-del-coronavirus-en-bolivia">https://eldeber.com.bo/169472_lanzan-app-con-informacion-oficial-del-coronavirus-en-bolivia</a>
+                </p>
+
+
+                <p>Página Siete. Gobierno crea bono de Bs 500 para familias con hijos y prohíbe el corte de servicios
+                    básicos. <a
+                        href="https://www.paginasiete.bo/sociedad/2020/3/18/gobierno-crea-bono-de-bs-500-para-familias-con-hijos-prohibe-el-corte-de-servicios-basicos-250019.html">https://www.paginasiete.bo/sociedad/2020/3/18/gobierno-crea-bono-de-bs-500-para-familias-con-hijos-prohibe-el-corte-de-servicios-basicos-250019.html</a>
+                </p>
+
+                <h3>Brasil </h3>
+
+                <p>CNN. Lo que sabemos del coronavirus en Brasil: casos, medidas y recomendaciones. <a
+                        href="https://cnnespanol.cnn.com/2020/03/02/lo-que-sabemos-del-coronavirus-en-brasil-casos-medidas-y-recomendaciones/">https://cnnespanol.cnn.com/2020/03/02/lo-que-sabemos-del-coronavirus-en-brasil-casos-medidas-y-recomendaciones/</a>
+                </p>
+
+
+                <p>El Deber. Bolsonaro asegura que la cuarentena por el virus pone en riesgo la economía del país. <a
+                        href="https://eldeber.com.bo/170833_bolsonaro-afirma-que-la-cuarentena-por-coronavirus-puede-ser-ruinosa-para-brasil">https://eldeber.com.bo/170833_bolsonaro-afirma-que-la-cuarentena-por-coronavirus-puede-ser-ruinosa-para-brasil</a>
+                </p>
+
+                <h3>China</h3>
+
+                <p>XinhuaNet. Xi orders resolute effords to curb virus spread. <a
+                        href="http://xinhuanet.com/english/2020-01/20/c_138721535.htm">http://xinhuanet.com/english/2020-01/20/c_138721535.htm</a>
+                </p>
+
+                <p>Deutsche Welle (DW). Coronavirus exposes the divide between China’s rich and pour. <a
+                        href="https://www.dw.com/en/coronavirus-exposes-the-divide-between-chinas-rich-and-poor/a-52526369">https://www.dw.com/en/coronavirus-exposes-the-divide-between-chinas-rich-and-poor/a-52526369</a>
+                </p>
+
+                <p>Revista Science. China’s agressive measures have slowed the coronavirus. They may not work in other countries. <href="https://www.sciencemag.org/news/2020/03/china-s-aggressive-measures-have-slowed-coronavirus-they-may-not-work-other-countries">https://www.sciencemag.org/news/2020/03/china-s-aggressive-measures-have-slowed-coronavirus-they-may-not-work-other-countries</a>
+                </p>
+
+                <p>El Español. Control ciudadano y ‘big data’: así ha dominado China la pandemia del coronavirus. <a
+                        href="https://www.elespanol.com/mundo/20200313/control-ciudadano-data-dominado-china-pandemia-coronavirus/474204260_0.html">https://www.elespanol.com/mundo/20200313/control-ciudadano-data-dominado-china-pandemia-coronavirus/474204260_0.html</a>
+                </p>
+
+                <p>Radio y Televisión Española (RTVE). China pone a otros 24 millones de personas en cuarentena en la
+                    región de Hubei. <a
+                        href="https://www.rtve.es/noticias/20200217/china-pone-otros-24-millones-personas-cuarentena-region-hubei/2001990.shtml">https://www.rtve.es/noticias/20200217/china-pone-otros-24-millones-personas-cuarentena-region-hubei/2001990.shtml</a>
+                </p>
+
+                <p>Reuters. Wuhan lockdown ‘unprecedented’, shows commitment to contain virus: WHO representative in
+                    China. <a
+                        href="https://www.reuters.com/article/us-china-health-who-idUSKBN1ZM1G9">https://www.reuters.com/article/us-china-health-who-idUSKBN1ZM1G9</a>
+                </p>
+
+                <p>NyTimes. To Tame Coronavirus, Mao-Style Social Control Blankets China. <a
+                        href="https://www.nytimes.com/2020/02/15/business/china-coronavirus-lockdown.html">https://www.nytimes.com/2020/02/15/business/china-coronavirus-lockdown.html</a>
+                </p>
+
+                <p>Infobae. Paso a paso: el informe que explica cómo el régimen chino permitió que el coronavirus se
+                    convirtiera en pandemia. <a
+                        href="https://www.infobae.com/america/mundo/2020/03/25/paso-a-paso-el-informe-que-explica-por-que-la-censura-china-permitio-que-el-coronavirus-se-convirtiera-en-pandemia/">https://www.infobae.com/america/mundo/2020/03/25/paso-a-paso-el-informe-que-explica-por-que-la-censura-china-permitio-que-el-coronavirus-se-convirtiera-en-pandemia/</a>
+                </p>
+
+                <h3>Corea del Sur</h3>
+
+                <p>Deutsche Welle (DW). Corea del Sur controla al virus sin cuarentena. <a
+                        href="https://www.dw.com/es/corea-del-sur-controla-al-virus-sin-cuarentena/av-52864877">https://www.dw.com/es/corea-del-sur-controla-al-virus-sin-cuarentena/av-52864877</a>
+                </p>
+
+                <p>British Broadcasting Corporation (BBC). Coronavirus: la exitosa estrategia de Corea del Sur para
+                    salvar vidas en medio de la pandemia del covid-19. <a
+                        href="https://www.bbc.com/mundo/noticias-51838817">https://www.bbc.com/mundo/noticias-51838817</a>
+                </p>
+
+                <p>El Español. Así es la app que frenado el coronavirus en Corea del Sur. <a
+                        href="https://www.elespanol.com/omicrono/software/20200315/app-frenado-coronavirus-corea-sur/474454544_0.html">https://www.elespanol.com/omicrono/software/20200315/app-frenado-coronavirus-corea-sur/474454544_0.html</a>
+                </p>
+
+                <h3>Cuba</h3>
+
+                <p>TELESUR. Cuba aplica nuevas medidas para evitar expansión de covid-19. <a
+                        href="https://www.telesurtv.net/news/cuba-gobierno-anuncio-nuevas-medidas-coronavirus-20200324-0001.html">https://www.telesurtv.net/news/cuba-gobierno-anuncio-nuevas-medidas-coronavirus-20200324-0001.html</a>
+                </p>
+
+                <p>British Broadcasting Corporation (BBC). Cómo le hace frente al covid-19 cada país de América Latina.
+                    <a
+                        href="https://www.bbc.com/mundo/noticias-america-latina-51881075">https://www.bbc.com/mundo/noticias-america-latina-51881075</a>
+                </p>
+
+                <h3>Ecuador </h3>
+
+                <p>El Universo. Coronavirus en Ecuador: bonos y alimentos entregarán a grupos vulnerables. <a
+                        href="https://www.eluniverso.com/noticias/2020/03/21/nota/7790811/bonos-alimentos-se-entregaran-grupos-vulnerables-emergencia-ante">https://www.eluniverso.com/noticias/2020/03/21/nota/7790811/bonos-alimentos-se-entregaran-grupos-vulnerables-emergencia-ante</a>
+                </p>
+
+                <p>La Prensa. Ecuador militariza la provincia más afectada por el coronavirus. <a
+                        href="https://www.laprensa.com.ni/2020/03/23/internacionales/2654428-ecuador-militariza-provincia-mas-afectada-por-coronavirus">https://www.laprensa.com.ni/2020/03/23/internacionales/2654428-ecuador-militariza-provincia-mas-afectada-por-coronavirus</a>
+                </p>
+
+                <p>Red Uno de Bolivia. Ecuador dispara en contagios y muertes por coronavirus. <a
+                        href="https://www.reduno.com.bo/nota/ecuador-se-dispara-en-contagios-y-muertes-por-coronavirus-2020324203246">https://www.reduno.com.bo/nota/ecuador-se-dispara-en-contagios-y-muertes-por-coronavirus-2020324203246</a>
+                </p>
+
+                <p>BBC. Coronavirus: ¿por qué Ecuador tiene el mayor número de contagios y muertos per cápita de
+                    covid-19 en América Latina? <a
+                        href="https://www.bbc.com/mundo/noticias-america-latina-52036460">https://www.bbc.com/mundo/noticias-america-latina-52036460</a>
+                </p>
+
+                <h3>España</h3>
+
+                <p>La Vanguardia. Las apps para localizar afectados por coronavirus llegan a España. <a
+                        href="https://www.lavanguardia.com/tecnologia/20200320/474262207373/aplicaciones-apps-seguimiento-coronavirus-coronamadridcom-coronamadrid-app-aplicacion-espana-italia-madrid.html">https://www.lavanguardia.com/tecnologia/20200320/474262207373/aplicaciones-apps-seguimiento-coronavirus-coronamadridcom-coronamadrid-app-aplicacion-espana-italia-madrid.html</a>
+                </p>
+
+                <p>La Tercera. De la suspensión del pago de cuentas a bonos: las medidas de los gobiernos ante la crisis.<a
+                        href="https://www.latercera.com/mundo/noticia/de-la-suspension-del-pago-de-cuentas-a-bonos-las-medidas-de-los-gobiernos-ante-la-crisis/GIEDO24CZNHTZE32Z76675WE24/">https://www.latercera.com/mundo/noticia/de-la-suspension-del-pago-de-cuentas-a-bonos-las-medidas-de-los-gobiernos-ante-la-crisis/GIEDO24CZNHTZE32Z76675WE24/</a>
+                </p>
+
+
+                <p>El Mundo. Lopotegui, sobre el coronavirus: “Teníamos un ejemplo muy cerca, Italia y lo miramos muy
+                    tarde. ”<a
+                        href="https://www.elmundo.es/deportes/futbol/primera-division/2020/03/23/5e78d612fc6c838d7c8b4640.html">https://www.elmundo.es/deportes/futbol/primera-division/2020/03/23/5e78d612fc6c838d7c8b4640.html</a>
+                </p>
+
+
+                <h3>Italia</h3>
+
+
+                <p>La Nación. Coronavirus. “Enviaré a la policía con lanzallamas”: la furia un alcalde italiano con
+                    quienes violan la cuarentena.<a
+                        href="https://www.lanacion.com.ar/el-mundo/coronavirus-enojo-alcaldes-italianos-quienes-violan-cuarentena-nid2346561">https://www.lanacion.com.ar/el-mundo/coronavirus-enojo-alcaldes-italianos-quienes-violan-cuarentena-nid2346561</a>
+                </p>
+
+
+                <p>British Broadcasting Corporation (BBC). Coronavirus: Italia alcanza un nuevo récord de muertes por
+                    covid-19 al registrar 793 víctimas en un día. <a
+                        href="https://www.bbc.com/mundo/noticias-internacional-51977542">https://www.bbc.com/mundo/noticias-internacional-51977542</a>
+                </p>
+
+
+                <h3>México</h3>
+
+                <p>El Clarín. Coronavirus en México: Thalía criticó duro a López Obrador or su estrategia ante la
+                    pandemia.</p>
+
+                <p><a
+                        href="https://www.clarin.com/internacional/mexico/coronavirus-mexico-thalia-critico-duro-lopez-obrador-estrategia-pandemia_0_9DufJgY2N.html">https://www.clarin.com/internacional/mexico/coronavirus-mexico-thalia-critico-duro-lopez-obrador-estrategia-pandemia_0_9DufJgY2N.html</a>
+                </p>
+
+
+                <p>British Broadcasting Corporation (BBC). Coronavirus: 3 medidas que México á tomando frente a la
+                    pandemia y que aprendió de la crisis de la grupe A en 2009. <a
+                        href="https://www.bbc.com/mundo/noticias-america-latina-51867633">https://www.bbc.com/mundo/noticias-america-latina-51867633</a>
+                </p>
+
+
+                <h3>Perú </h3>
+
+                <p>América Economía. Perú toma medidas para reactivar la economía tras el impacto del coronavirus.<a
+                        href="https://www.americaeconomia.com/economia-mercados/finanzas/peru-toma-medidas-para-reactivar-la-economia-tras-el-impacto-del">https://www.americaeconomia.com/economia-mercados/finanzas/peru-toma-medidas-para-reactivar-la-economia-tras-el-impacto-del</a>
+                </p>
+
+
+                <p>British Broadcasting Corporation (BBC). Coronavirus: arú decreta cuarentena general en el país y
+                    cierre de fronteras durante 15 días te la pandemia del covid-19.<a
+                        href="https://www.bbc.com/mundo/noticias-america-latina-51902989">https://www.bbc.com/mundo/noticias-america-latina-51902989</a>
+                </p>
+
+
+                <h3>Reino Unido</h3>
+
+
+                <p>El País. Polémica en el Reino Unido por la estrategia contra el virus: un contagio controlado. <a
+                        href="https://elpais.com/sociedad/2020-03-13/la-estrategia-del-gobierno-de-johnson-contra-el-coronavirus-divide-a-la-comunidad-cientifica.html">https://elpais.com/sociedad/2020-03-13/la-estrategia-del-gobierno-de-johnson-contra-el-coronavirus-divide-a-la-comunidad-cientifica.html</a>
+                </p>
+
+
+                <p>El Clarín. Coronavirus en Reino Unido: Boris Johnson dispuso tres semanas de cuarentena obligatoria
+                    para los británicos. <a
+                        href="https://www.clarin.com/mundo/coronavirus-reino-unido-boris-johnson-dispuso-semanas-cuarentena-obligatoria-britanicos_0_y8gwPs_Ew.html">https://www.clarin.com/mundo/coronavirus-reino-unido-boris-johnson-dispuso-semanas-cuarentena-obligatoria-britanicos_0_y8gwPs_Ew.html</a>
+                </p>
+
+                <h3>Estados Unidos</h3>
+
+                <p>British Broadcasting Corporation (BBC). Cómo Trump impulsa su polémica política migratoria en medio
+                    de la pandemia de covid-19. <a
+                        href="https://www.bbc.com/mundo/noticias-internacional-51985556">https://www.bbc.com/mundo/noticias-internacional-51985556</a>
+                </p>
+
+
+                <p>The Washington Post. U.S. Health Experts Say Stricter Measures Are Required to Limit Coronavirus’s
+                    Spread. </p><a
+                        href="https://www.nytimes.com/2020/03/08/health/coronavirus-spread-united-states.html">https://www.nytimes.com/2020/03/08/health/coronavirus-spread-united-states.html</a>
+                </p>
+
+                <h3>Rusia</h3>
+
+
+                <p>British Broadcasting Corporation (BBC). Coronavirus en Rusia: qué hay detrás de la estrategia de Putin para gestionar la crisis de covid-19.
+                    <a href="https://www.bbc.com/mundo/noticias-internacional-51998807">https://www.bbc.com/mundo/noticias-internacional-51998807</a></p>
+
+
+                <p>NBC News. Coronavirus; Rusia’s low infection numbers viewed skeptically. <a
+                        href="https://www.nbcnews.com/news/world/coronavirus-russia-s-low-infection-numbers-viewed-skeptically-n1166101">https://www.nbcnews.com/news/world/coronavirus-russia-s-low-infection-numbers-viewed-skeptically-n1166101</a>
+                </p>
+
+
+                <p>Reuters. Russia to deport 88 foreigners for violating coronavirus quarantine. <a
+                        href="https://www.reuters.com/article/us-china-health-moscow-deportation-idUSKCN20M252">https://www.reuters.com/article/us-china-health-moscow-deportation-idUSKCN20M252</a>
+                </p>
+
+                <h3>Taiwan</h3>
+
+
+                <p>La Nación. Coronavirus: el país que lo controló sin seguir las recetas de la OMS. <a
+                        href="https://www.lanacion.com.ar/el-mundo/el-pais-controlo-coronavirus-sin-seguir-recetas-nid2346436">https://www.lanacion.com.ar/el-mundo/el-pais-controlo-coronavirus-sin-seguir-recetas-nid2346436</a></p>
+                <p>Deutsche Welle (DW). Así es como Taiwán logró contener el brote de coronavirus. <a
+                    href="https://www.dw.com/es/as%C3%AD-es-como-taiw%C3%A1n-logr%C3%B3-contener-el-brote-de-coronavirus/a-52737879">https://www.dw.com/es/as%C3%AD-es-como-taiw%C3%A1n-logr%C3%B3-contener-el-brote-de-coronavirus/a-52737879</a></p>
+
+
+
+
     </div>
-
-    <div class="fig2">
-        <div id="container2"></div>
-    </div>
-
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             let myChart = Highcharts.chart('container', {
@@ -160,7 +682,7 @@
                 enabled: false
             },
             title: {
-                text: 'Factores en la efectividad de las medidas contra el coronavirus',
+                text: 'Factores en la intervención efectiva contra el coronavirus',
                 y: 10
             },
 
@@ -195,12 +717,7 @@
             },
 
             legend: {
-                // align: 'right',
-                // layout: 'vertical',
-                // margin: 0,
-                // verticalAlign: 'top',
-                // y: 25,
-                // symbolHeight: 280,
+
                 align: 'center',
                 verticalAlign: 'top',
                 floating: true,
@@ -251,7 +768,7 @@
                     [1, 11, 1],
                     [1, 12, 1],
                     [1, 13, 1],
-                    [1, 14, 1],
+                    [1, 14, 0.75],
                     [2, 0, 1],
                     [2, 1, 0],
                     [2, 2, 0],
